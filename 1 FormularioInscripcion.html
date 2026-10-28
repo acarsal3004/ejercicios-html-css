@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            background-color: aquamarine;
+            padding: 10px;
+
+        }
+    </Style>
+</head>
+
+<body>
+
+    <table style="border: 1px solid black">
+        <tr>
+            <td>
+
+                <h1>Registro de Estudiante</h1>
+
+                <form action="0DatosRecibidos.html" method="post">
+                    <label for="nombre"></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+                    <label for="apellido"></label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellidos" required><br><br>
+
+                    <label for="DNI"></label>
+                    <input type="text" id="DNI" name="DNI" placeholder="DNI" required>
+
+                    <label for="correo"></label>
+                    <input type="email" id="correo" name="correo" placeholder="Correo"><br><br>
+
+                    <label for="Telefono"></label>
+                    <input type="text" id="Telefono" name="Telefono" placeholder="Número" required><br><br>
+
+                    <hr>
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input type="date" id="fecha" name="fecha" placeholder="Fecha de nacimiento" required>
+
+
+
+                    <hr>
+                    <p>Ciclo en el que está matriculado</p>
+                    <input type="radio" id="SMR" name="SMR" value="SMR">
+                    <label for="SMR">SMR</label><br>
+
+                    <input type="radio" id="FAPA" name="FAPA" value="FAPA">
+                    <label for="FAPA">FAPA</label><br><br>
+
+                    <hr>
+                    <p>Turno preferido</p>
+                    <input type="radio" id="mañana" name="mañana" value="mañana">
+                    <label for="mañana">Mañana</label><br>
+
+                    <input type="radio" id="tarde" name="tarde" value="tarde">
+                    <label for="tarde">Tarde</label><br><br>
+
+
+                    <hr>
+                    <p>Modalidad</p>
+                    <input type="radio" id="Presencial" name="Presencial" value="Presencial">
+                    <label for="Presencial">Presencial</label><br>
+
+                    <input type="radio" id="Semipresencial" name="Semipresencial" value="Semipresencial">
+                    <label for="Semipresencial">Semipresencial</label><br>
+
+                    <input type="radio" id="online" name="online" value="online">
+                    <label for="online">online</label><br>
+
+                    <hr>
+                    <p>Política y privacidad</p>
+                    <input type="checkbox" id="Política" name="Política" value="Política" required="yes">
+                    <label for="Política">Política y privacidad</label><br>
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar Campos">
+
+
+
+                </form>
+
+
+
+            </td>
+        </tr>
+
+
+
+    </table>
+</body>
+
+</html>

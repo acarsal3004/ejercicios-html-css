@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Satisfacción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 15px;
+            max-width: 650px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(228, 236, 206);
+        }
+
+        td {
+            background-color: white;
+        }
+
+        fieldset {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 15px;
+        }
+
+        legend {
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+
+        /* Colores para las valoraciones del 1 al 5 */
+        .val-1 {
+            background-color: #ff9999;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .val-2 {
+            background-color: #ffcc99;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .val-3 {
+            background-color: #ffff99;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .val-4 {
+            background-color: #ccff99;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .val-5 {
+            background-color: #99ff99;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(209, 242, 255);">
+
+    <h1>Encuesta de Satisfacción del Servicio</h1>
+
+    <table>
+        <td>
+            <form action="0DatosRecibidos.html" method="post">
+
+                <fieldset>
+                    <legend>Opinión del Cliente</legend>
+
+                    <label for="nombre">Nombre del cliente (opcional):</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"><br><br>
+
+                    <label for="servicio">Servicio utilizado:</label><br>
+                    <input type="text" id="servicio" name="servicio" placeholder="Ej: Reparación, Mantenimiento..."
+                        required><br><br>
+
+                    <label for="valoracion">Valoración general (1 al 5):</label><br>
+                    <select id="valoracion" name="valoracion" required>
+                        <option value="">Selecciona una nota</option>
+                        <option value="1">1 - Muy deficiente</option>
+                        <option value="2">2 - Deficiente</option>
+                        <option value="3">3 - Regular</option>
+                        <option value="4">4 - Bueno</option>
+                        <option value="5">5 - Excelente</option>
+                    </select><br><br>
+
+                    <p><b>Aspectos que más le han gustado:</b></p>
+                    <input type="checkbox" id="atencion" name="aspectos" value="atencion">
+                    <label for="atencion">Atención</label><br>
+                    <input type="checkbox" id="rapidez" name="aspectos" value="rapidez">
+                    <label for="rapidez">Rapidez</label><br>
+                    <input type="checkbox" id="precio" name="aspectos" value="precio">
+                    <label for="precio">Precio</label><br>
+                    <input type="checkbox" id="calidad" name="aspectos" value="calidad">
+                    <label for="calidad">Calidad</label><br><br>
+
+                    <p><b>¿Recomendaría el servicio?</b></p>
+                    <input type="radio" id="rec_si" name="recomienda" value="si" required>
+                    <label for="rec_si">Sí</label><br>
+                    <input type="radio" id="rec_no" name="recomienda" value="no">
+                    <label for="rec_no">No</label><br><br>
+
+                    <label for="comentarios">Comentarios:</label><br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50"
+                        placeholder="Escribe tus comentarios aquí..."></textarea>
+                </fieldset>
+
+                <br>
+
+                <input type="submit" value="Enviar Encuesta">
+                <input type="reset" value="Limpiar Campos">
+
+            </form>
+        </td>
+    </table>
+
+    <hr>
+
+    <h2>Resultados de Encuestas Recientes</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Valoración</th>
+                <th>Recomienda</th>
+                <th>Comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>Reparación</td>
+                <td class="val-5">5</td>
+                <td>Sí</td>
+                <td>Muy buen servicio</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>Instalación</td>
+                <td class="val-4">4</td>
+                <td>Sí</td>
+                <td>Rápido y eficaz</td>
+            </tr>
+            <tr>
+                <td>Lucía</td>
+                <td>Reparación</td>
+                <td class="val-3">3</td>
+                <td>No</td>
+                <td>Tardaron demasiado</td>
+            </tr>
+            <tr>
+                <td>Carlos</td>
+                <td>Mantenimiento</td>
+                <td class="val-5">5</td>
+                <td>Sí</td>
+                <td>Excelente atención</td>
+            </tr>
+            <tr>
+                <td>Elena</td>
+                <td>Instalación</td>
+                <td class="val-2">2</td>
+                <td>No</td>
+                <td>Precio elevado</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h2>Tabla Resumen de Valoraciones</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Puntuación</th>
+                <th>Número de Clientes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1 estrella</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2 estrellas</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3 estrellas</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>4 estrellas</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>5 estrellas</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
