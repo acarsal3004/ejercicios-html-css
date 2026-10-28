@@ -1,2 +1,7 @@
-# ejercicios-html-css
-Mis primeros ejercicios de HTML y CSS.
+# Mi repositorio
+
+Repositorio con los ejercicios realizados en clase.
+
+#
+Nombre: Abraham Caro Salvador
+Curso: 2 SMRT
