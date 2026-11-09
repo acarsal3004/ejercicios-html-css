@@ -1,14 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Control LED Arduino</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Total 3 LEDs - Abrahm y Roland</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -16,20 +12,12 @@
 
     <main class="contenedor">
 
-        <h1>CONTROL LED ARDUINO</h1>
-
-        <p>Controla un LED desde tu navegador</p>
+        <h1>CONTROL TOTAL DE LEDS</h1>
+        <p>Panel avanzado creado por Abrahm y Roland</p>
 
         <section class="conexion">
-
-            <p id="estadoConexion">
-                Arduino desconectado
-            </p>
-
-            <button id="btnConectar">
-                Conectar Arduino
-            </button>
-
+            <p id="estadoConexion">Arduino desconectado</p>
+            <button id="btnConectar">Conectar Arduino</button>
         </section>
 
         <section class="panel">
@@ -38,33 +26,64 @@
                 💡
             </div>
 
-            <h2 id="estadoLed">LED APAGADO</h2>
+            <h2 id="estadoLed">SISTEMA APAGADO</h2>
 
-            <div class="botones">
-
-                <button id="btnEncender"
-                        disabled>
-                    ENCENDER
-                </button>
-
-                <button id="btnApagar"
-                        disabled>
-                    APAGAR
-                </button>
-
+            <!-- Controles Generales -->
+            <div class="botones" style="margin-bottom: 15px;">
+                <button id="btnEncenderTodo" disabled>ENCENDER TODO</button>
+                <button id="btnApagarTodo" disabled>APAGAR TODO</button>
+                <button id="btnParpadear" disabled>PARPADEAR</button>
+                <button id="btnPararParpadeo" disabled style="background-color: #dc3545; color: white;">PARAR PARPADEO</button>
             </div>
 
-            <p id="mensaje">
-                Conecta Arduino para comenzar
-            </p>
+            <!-- Controles Independientes por Color (Pines 9, 10 y 11) -->
+            <div class="controles-independientes" style="border-top: 1px solid #ccc; padding-top: 12px; margin-bottom: 15px;">
+                <p><strong>Control Individual por Color:</strong></p>
+                
+                <!-- LED Azul (Pin 9) -->
+                <div style="margin-bottom: 8px;">
+                    <span style="color: #007bff; font-weight: bold;">LED Azul (Pin 9):</span>
+                    <button id="btnAzulOn" disabled style="background-color: #007bff; color: white;">ON</button>
+                    <button id="btnAzulOff" disabled>OFF</button>
+                </div>
+
+                <!-- LED Naranja (Pin 10) -->
+                <div style="margin-bottom: 8px;">
+                    <span style="color: #fd7e14; font-weight: bold;">LED Naranja (Pin 10):</span>
+                    <button id="btnNaranjaOn" disabled style="background-color: #fd7e14; color: white;">ON</button>
+                    <button id="btnNaranjaOff" disabled>OFF</button>
+                </div>
+
+                <!-- LED Verde (Pin 11) -->
+                <div style="margin-bottom: 8px;">
+                    <span style="color: #28a745; font-weight: bold;">LED Verde (Pin 11):</span>
+                    <button id="btnVerdeOn" disabled style="background-color: #28a745; color: white;">ON</button>
+                    <button id="btnVerdeOff" disabled>OFF</button>
+                </div>
+            </div>
+
+            <!-- Control Deslizante PWM Global para Luminosidad de Todos los LEDs -->
+            <div class="pwm-control" style="margin-bottom: 15px;">
+                <label for="pwmSlider"><strong>Luminosidad Global (Todos los LEDs):</strong></label><br>
+                <input type="range" id="pwmSlider" min="0" max="255" value="0" disabled style="width: 100%;">
+            </div>
+
+            <!-- Contador de Activaciones -->
+            <p style="font-weight: bold;">Veces que se ha encendido: <span id="contador">0</span></p>
+
+            <p id="mensaje">Conecta Arduino para comenzar</p>
 
         </section>
 
     </main>
 
+    <!-- Pie de página con nombres y GIF -->
+    <footer style="text-align: center; margin-top: 30px; padding: 10px;">
+        <p>Realizado por: <strong>Abraham y Roland</strong></p>
+        <img src="https://imgs.search.brave.com/rhR2DZQLVH2eVypfYeNto3qrqbnXjwEdy0vnNPwMJwo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTIuZ2lwaHkuY29t/L21lZGlhL3YxLlky/bGtQVGM1TUdJM05q/RXhZMmhzTkdJNU1u/bHZaRGhwWWpCMmVX/WjNlamQzY1dodmJU/SnBlRFZyY1dsdWEz/cGljSE50WlNabGNE/MTJNVjluYVdaelgz/TmxZWEpqYUNaamRE/MW4vbW51NVVsMlpL/T2s3WXpGb1JEL2dp/cGh5LmdpZg.gif" alt="Animación Arduino" width="80" style="border-radius: 8px;">
+    </footer>
+
     <script src="script.js"></script>
 
 </body>
 </html>
-
-

@@ -59,11 +59,11 @@ button {
     background: #2563eb;
 }
 
-#btnEncender {
+#btnEncenderTodo, #btnParpadear {
     background: #16a34a;
 }
 
-#btnApagar {
+#btnApagarTodo {
     background: #dc2626;
 }
 
